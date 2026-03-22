@@ -1,9 +1,18 @@
 const username = "devashishkumar";
 
-// Dark/Light Mode Toggle
-const toggleButton = document.getElementById("theme-toggle");
-toggleButton.addEventListener("click", () => {
-  document.documentElement.classList.toggle("dark");
+// Initialize theme from localStorage
+const savedTheme = localStorage.getItem("theme") || "dark";
+if (savedTheme === "light") {
+  document.documentElement.classList.remove("dark");
+} else {
+  document.documentElement.classList.add("dark");
+}
+
+// Theme Toggle
+const toggleBtn = document.getElementById("theme-toggle");
+toggleBtn.addEventListener("click", () => {
+  const isDark = document.documentElement.classList.toggle("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
 // Fetch GitHub Profile
@@ -43,7 +52,7 @@ function displayProfile(user) {
 function displayRepos(repos) {
   const container = document.getElementById("repos");
   repos.forEach((repo) => {
-    if (repo.name !== "devashishkumar") {
+    if (!["devashishkumar", "vercel-app"].includes(repo.name)) {
       container.innerHTML += `
       <div class="bg-white dark:bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 transition">
         <a href="${repo.html_url}" target="_blank" class="text-lg font-semibold text-indigo-600 hover:underline">${repo.name}</a>
