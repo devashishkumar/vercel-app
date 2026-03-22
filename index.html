@@ -3,7 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GitHub Profile - Ashish</title>
+    <meta name="title" content="Ashish - Tech Portfolio" />
+    <meta
+      name="description"
+      content="Ashish’s GitHub portfolio showcases open‑source projects in JavaScript, Node.js and modern web development, along with real contributions, code samples, and developer skills. A tech professional building impactful software."
+    />
+    <meta
+      name="keywords"
+      content="Ashish, Portfolio, Developer, DevOps, Web Development, Cloud, GitHub, Projects, Skills"
+    />
+    <meta name="author" content="Ashish" />
+    <meta property="og:title" content="Ashish - Tech Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore Ashish’s GitHub contributions and real projects in web and software development."
+    />
+    <meta property="og:url" content="https://devashishkumar.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <title>
+      Ashish | Technical Architect | Full-Stack Developer & GitHub Portfolio
+    </title>
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,18 +45,58 @@
   <body
     class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-500"
   >
-    <!-- Navbar -->
     <nav class="bg-white dark:bg-gray-800 shadow mb-6">
       <div
         class="container mx-auto px-6 py-4 flex justify-between items-center"
       >
+        <!-- Logo -->
         <h1 class="text-xl font-bold">Ashish</h1>
-        <ul class="flex space-x-6">
+
+        <!-- Hamburger Button (Mobile) -->
+        <div class="md:hidden">
+          <button
+            id="mobile-menu-button"
+            class="text-gray-800 dark:text-gray-100 focus:outline-none"
+          >
+            <!-- Hamburger Icon -->
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Menu Links -->
+        <ul id="menu" class="hidden md:flex space-x-6">
           <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
           <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
           <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
         </ul>
       </div>
+
+      <!-- Mobile Menu -->
+      <ul id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2">
+        <li>
+          <a href="#skills" class="block py-2 hover:text-blue-500">Skills</a>
+        </li>
+        <li>
+          <a href="#projects" class="block py-2 hover:text-blue-500"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a href="#contact" class="block py-2 hover:text-blue-500">Contact</a>
+        </li>
+      </ul>
     </nav>
 
     <div class="container mx-auto p-6">
@@ -107,30 +166,80 @@
 
       <!-- Contact -->
       <section id="contact" class="mb-12">
-        <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-        <form class="grid gap-4 max-w-lg">
-          <input
-            type="text"
-            placeholder="Your Name"
-            class="p-3 rounded bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700"
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            class="p-3 rounded bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700"
-          />
-          <textarea
-            placeholder="Your Message"
-            rows="4"
-            class="p-3 rounded bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700"
-          ></textarea>
-          <button
-            type="submit"
-            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-          >
-            Send Message
-          </button>
-        </form>
+        <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-indigo-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 0v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8"
+              />
+            </svg>
+            <span>Email: </span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-indigo-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 5h12M9 3v2m6 0v2m-6 0h6M3 10h12M9 8v2m6 0v2m-6 0h6M3 15h12M9 13v2m6 0v2m-6 0h6"
+              />
+            </svg>
+            <span>Phone: </span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-indigo-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 20h5v-2a7 7 0 00-5-6.92M9 20H4v-2a7 7 0 015-6.92M12 12a3 3 0 100-6 3 3 0 000 6z"
+              />
+            </svg>
+            <span>Location:</span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-indigo-500"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 3h18v18H3V3z"
+              />
+            </svg>
+            <span>Website: </span>
+          </div>
+        </div>
       </section>
     </div>
 
@@ -141,8 +250,8 @@
       <div
         class="container mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center"
       >
-        <p class="text-sm" id="footer-text">
-          © 2026 Ashish. All rights reserved.
+        <p class="text-sm text-gray-600 dark:text-gray-300" id="footer-text">
+          © <span id="year"></span> Designed by Ashish.
         </p>
 
         <div class="flex space-x-6 my-4 md:my-0">
@@ -164,19 +273,11 @@
             class="hover:text-blue-500"
             >hashnode</a
           >
-          <a href="mailto:arora.ashish0512@gmail.com" class="hover:text-blue-500">Email</a>
         </div>
       </div>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-      // Dynamic Year
-      document.getElementById("footer-text").innerHTML =
-        `© ${new Date().getFullYear()} Ashish. All rights reserved.`;
-    </script>
-
-    <!-- Your GitHub Script -->
+    <!-- App Script -->
     <script src="app.js"></script>
   </body>
 </html>

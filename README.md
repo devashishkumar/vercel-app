@@ -1,52 +1,123 @@
-# Vercel GitHub Profile Viewer
+# Ashish Kumar - Personal Portfolio
 
-This project displays a GitHub profile and top repositories for a fixed username (devashishkumar), with a dark/light mode toggle.
+A modern, responsive personal portfolio website built with HTML, CSS, and JavaScript. Features a dynamic GitHub profile integration, skills showcase, project gallery, and contact information with dark/light mode toggle.
 
-## Files
+## 🚀 Features
 
-- index.html: page structure and layout.
-- app.js: client-side logic to fetch GitHub API data and render profile + repos.
-- README.md: documentation (this file).
+- **Dynamic GitHub Integration**: Automatically fetches and displays GitHub profile information and top repositories
+- **Dark/Light Mode Toggle**: Seamless theme switching with localStorage persistence
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Skills Showcase**: Grid layout displaying technical skills and technologies
+- **Project Gallery**: Interactive repository cards with links to GitHub
+- **Contact Section**: Professional contact information layout
+- **Mobile Navigation**: Hamburger menu for mobile devices
+- **Smooth Animations**: Hover effects and transitions throughout
 
-## Features
+## 🛠️ Technologies Used
 
-- Dark/Light mode toggle via 	heme-toggle button.
-- Fetches GitHub user data from https://api.github.com/users/devashishkumar.
-- Fetches up to 12 most recently updated repos.
-- Renders profile card, stats, and repo cards in a responsive grid.
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Styling**: Tailwind CSS (CDN)
+- **Icons**: Heroicons (SVG)
+- **API**: GitHub REST API
+- **Deployment**: Vercel
 
-## index.html behavior
+## 📁 Project Structure
 
-- Adds dark class to <html> by default for dark theme.
-- Uses Tailwind CSS CDN with darkMode: 'class'.
-- Contains #profile and #repos containers.
-- Includes the app.js script at the bottom.
+```
+vercel-app/
+├── index.html      # Main HTML structure and layout
+├── app.js          # Client-side logic and GitHub API integration
+└── README.md       # Project documentation
+```
 
-## app.js behavior
+## 🚀 Getting Started
 
-1. Defines username = 'devashishkumar'.
-2. Attaches click listener to #theme-toggle to toggle dark mode class.
-3. fetchProfile() calls GitHub Users API and returns JSON.
-4. fetchRepos() calls GitHub Repos API (sorted by updated) and returns JSON.
-5. displayProfile(user) renders avatar, name, login, bio, followers, following, public repos, and profile link.
-6. displayRepos(repos) renders repo cards (excludes repo named devashishkumar) with name, description, language, and stars.
-7. init() loads profile + repos and renders them.
+### Prerequisites
 
-## Run locally
+- A modern web browser
+- Internet connection (for GitHub API calls)
 
-1. Open index.html in a browser (no build step required).
-2. Or use a local static server (e.g. 
-px serve, python -m http.server).
+### Local Development
 
-## Customize
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd vercel-app
+   ```
 
-- Change username in app.js to display another user.
-- Adjust repo filter or fields in displayRepos() as needed.
+2. Open `index.html` in your browser:
+   ```bash
+   # Using Python (if available)
+   python -m http.server 8000
 
-## Notes
+   # Or simply open index.html in your browser
+   ```
 
-- Uses public GitHub API; may be rate-limited (60 requests/hour per IP without auth).
-- Add API token support and error handling if needed for production use.
+3. The website will load with the GitHub profile data for the configured user.
+
+### Customization
+
+#### Change GitHub Username
+
+Edit the `username` variable in `app.js`:
+```javascript
+const username = "your-github-username";
+```
+
+#### Modify Skills
+
+Update the skills grid in `index.html` within the `#skills` section.
+
+#### Update Contact Information
+
+Replace the placeholder content in the `#contact` section of `index.html` with your actual contact details.
+
+## 🌐 Deployment
+
+### Vercel (Recommended)
+
+1. Connect your GitHub repository to Vercel
+2. Deploy automatically on every push
+3. Access your live portfolio at the provided Vercel URL
+
+### Other Platforms
+
+This is a static website that can be deployed to:
+- GitHub Pages
+- Netlify
+- Firebase Hosting
+- Any static web host
+
+## 📊 GitHub API Usage
+
+- **Rate Limits**: 60 requests per hour for unauthenticated requests
+- **Data Fetched**:
+  - User profile (avatar, name, bio, stats)
+  - Top 12 repositories (sorted by recent updates)
+- **Error Handling**: Basic error handling included
+
+## 🎨 Customization Options
+
+- **Themes**: Modify Tailwind classes for custom color schemes
+- **Layout**: Adjust grid layouts and spacing
+- **Animations**: Customize hover effects and transitions
+- **Content**: Update all text content and links
+
+## 📝 Notes
+
+- Built with modern web standards
+- No build process required
+- Lightweight and fast loading
+- SEO-friendly structure
+- Accessible design patterns
+
+## 🤝 Contributing
+
+Feel free to fork this project and customize it for your own portfolio!
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
 
 ## License
 

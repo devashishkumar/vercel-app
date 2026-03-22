@@ -15,6 +15,17 @@ toggleBtn.addEventListener("click", () => {
   localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
+// Mobile menu toggle
+const btn = document.getElementById("mobile-menu-button");
+const mobileMenu = document.getElementById("mobile-menu");
+
+btn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+// Dynamic Year
+document.getElementById("year").innerHTML =
+  `${new Date().getFullYear()}`;
+
 // Fetch GitHub Profile
 async function fetchProfile() {
   const res = await fetch(`https://api.github.com/users/${username}`);
