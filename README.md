@@ -20,7 +20,7 @@ This project displays a GitHub profile and top repositories for a fixed username
 - Adds dark class to <html> by default for dark theme.
 - Uses Tailwind CSS CDN with darkMode: 'class'.
 - Contains #profile and #repos containers.
-- Includes the pp.js script at the bottom.
+- Includes the app.js script at the bottom.
 
 ## app.js behavior
 
